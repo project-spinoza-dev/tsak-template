@@ -88,6 +88,8 @@ $('#submitform').click(function(){
 	$("#output-panel .panel-body").append('<div class="output-div"><label class="label label-success">Output Json</label></br>'+jsonString+'</div>');
 });
 
+//. fire dropDown onChange event
+$("#commands-select").trigger('change');
 
 });  // End of document ready function.
 
