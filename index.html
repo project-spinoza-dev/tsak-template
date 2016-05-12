@@ -65,8 +65,10 @@
     <!-- Page Content -->
     <div class="container">
         <!-- First Featurette -->
-        <div class="featurette" id="command">
-            <div class="command-cont">
+
+        <div class="featurette " id="command">
+            <div class="command-cont panel panel-default">
+                <div class="panel-body">
                 <div><h3>Twitter Swiss Army Knife</h3></div>
                 <form id="command-form-id" class="command-form" action="/commands-run" method="post">
                     <div class="form-group">
@@ -75,31 +77,24 @@
                     </select>
                     </div>
                     <div class="commands-selected">
-                        <div class="form-group">
-                            <label class="label label-default">uname</label>
-                            <input type="text" class="form-control inputcommand" name="uname" id="uname">
-                            <label class="label label-default ">limit</label>
-                            <input type="text" class="form-control inputcommand" name="limit" id="limit">
-                            <label class="label label-default">output</label>
-                            <input type="text" class="form-control inputcommand" name="output" id="output">
-                        </div>
+                        
                     </div>
                     <div class="applicationkeys" style="display: none;">
                         <div class="form-group">
                         <label class="label label-default" for="consumerKey">Consumer Key (API Key)</label>
-                        <input type="text" class="form-control" placeholder="Place Consumer API Key" name="consumerKey" id="consumerKey">
+                        <input type="text" class="form-control" placeholder="Place Consumer API Key" name="consumerKey" id="consumerKey" required>
                         </div>
                         <div class="form-group">
                         <label class="label label-default" for="consumerSecret">Consumer Secret (API Secret)</label>
-                        <input type="text" class="form-control" placeholder="Place Consumer API Secret" name="consumerSecret" id="consumerSecret">
+                        <input type="text" class="form-control" placeholder="Place Consumer API Secret" name="consumerSecret" id="consumerSecret" required>
                         </div>
                         <div class="form-group">
                         <label class="label label-default" for="accessToken">Access Token</label>
-                        <input type="text" class="form-control" placeholder="Place Access Token" name="accessToken" id="accessToken">
+                        <input type="text" class="form-control" placeholder="Place Access Token" name="accessToken" id="accessToken" required>
                         </div>
                         <div class="form-group">
                         <label class="label label-default" for="accessTokenSecret">Access Token Secret</label>
-                        <input type="text" class="form-control" placeholder="Place Access Token Secret" name="accessTokenSecret" id="accessTokenSecret">
+                        <input type="text" class="form-control" placeholder="Place Access Token Secret" name="accessTokenSecret" id="accessTokenSecret" required>
                         </div>
                     </div>
                     <div>
@@ -108,6 +103,10 @@
                     </div>
                     
                 </form>
+                </div>
+            </div>
+            <div class="panel panel-default" id="output-panel" style="display: none;">
+              <div class="panel-body " ></div>
             </div>
             
         </div>

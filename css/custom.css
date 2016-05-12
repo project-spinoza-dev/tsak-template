@@ -47,7 +47,9 @@ body {
 .featurette-heading {
     font-size: 50px;
 }
-
+#output-panel{
+    height: 400px;
+}
 footer {
     margin: 50px 0;
 }

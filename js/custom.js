@@ -12,13 +12,13 @@ $( document ).ready(function() {
 	//make a json data
 	var commandJson = {
 		"dumpFollowerIDs":[
-			"uname", "limit","output"
+			"-uname", "-limit","-o"
 		],
 		"dumpGeoDetails":[
-			"pid","output"
+			"-pid","-o"
 		],
 		"dumpHomeTimeLine":[
-			"output"
+			"-o"
 		]
 	};
 	for(var item in commandJson){
@@ -33,9 +33,8 @@ $( document ).ready(function() {
 			$('.commands-selected').empty();
 			for(var vi in fields){
 				var fieldLabel = fields[vi];
-				$('.commands-selected').append('<div class="form-group"><label class="label label-default">'+fieldLabel+'</label><input type="text" class="form-control inputcommand" name="'+fieldLabel+'" id="'+fieldLabel+'"></div>');
+				$('.commands-selected').append('<div class="form-group"><label class="label label-default">'+fieldLabel+'</label><input type="text" class="form-control inputcommand" name="'+fieldLabel+'" id="'+fieldLabel+'" required></div>');
 			}
-			
 		});
 	});
 
@@ -82,8 +81,11 @@ $('#submitform').click(function(){
 		}
 	};
 	commandJson['values'] = jsonCommand;
-	var myString = JSON.stringify(commandJson);
-	console.log(myString);
+	var jsonString = JSON.stringify(commandJson);
+	//console.log(myString);
+	$("#output-panel").css("display","block");
+	//$("#output-panel .panel-body").empty();
+	$("#output-panel .panel-body").append('<div class="output-div"><label class="label label-success">Output Json</label></br>'+jsonString+'</div>');
 });
 
 
