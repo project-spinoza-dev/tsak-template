@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TSAK/Twitter Swiss Army Knife</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">TSAK</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#command">Commands</a>
+                    </li>
+                    <li>
+                        <a href="#logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+    <header class="header-image">
+        
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- First Featurette -->
+        <div class="featurette" id="command">
+            <div class="command-cont">
+                <div><h3>Twitter Swiss Army Knife</h3></div>
+                <form id="command-form-id" class="command-form" action="/commands-run" method="post">
+                    <div class="form-group">
+                    <label class="label label-default" for="commands-select">Select Command</label>
+                    <select class="form-control" id="commands-select">
+                    </select>
+                    </div>
+                    <div class="commands-selected">
+                        <div class="form-group">
+                            <label class="label label-default">uname</label>
+                            <input type="text" class="form-control inputcommand" name="uname" id="uname">
+                            <label class="label label-default ">limit</label>
+                            <input type="text" class="form-control inputcommand" name="limit" id="limit">
+                            <label class="label label-default">output</label>
+                            <input type="text" class="form-control inputcommand" name="output" id="output">
+                        </div>
+                    </div>
+                    <div class="applicationkeys" style="display: none;">
+                        <div class="form-group">
+                        <label class="label label-default" for="consumerKey">Consumer Key (API Key)</label>
+                        <input type="text" class="form-control" placeholder="Place Consumer API Key" name="consumerKey" id="consumerKey">
+                        </div>
+                        <div class="form-group">
+                        <label class="label label-default" for="consumerSecret">Consumer Secret (API Secret)</label>
+                        <input type="text" class="form-control" placeholder="Place Consumer API Secret" name="consumerSecret" id="consumerSecret">
+                        </div>
+                        <div class="form-group">
+                        <label class="label label-default" for="accessToken">Access Token</label>
+                        <input type="text" class="form-control" placeholder="Place Access Token" name="accessToken" id="accessToken">
+                        </div>
+                        <div class="form-group">
+                        <label class="label label-default" for="accessTokenSecret">Access Token Secret</label>
+                        <input type="text" class="form-control" placeholder="Place Access Token Secret" name="accessTokenSecret" id="accessTokenSecret">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="key-conf"><a href="#" id="key-conf-id" class="key-conf-show">Show Keys Configuration</a></div>
+                        <button type="button" class="btn btn-primary" id="submitform">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; TSAK 2016</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Custom jQuery -->
+    <script src="js/custom.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
