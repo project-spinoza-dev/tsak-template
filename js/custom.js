@@ -30,8 +30,10 @@ $(document).ready(function(){
 					var expectedLabel = $(parent).children().get(0);
 					$(expectedLabel).removeClass("label-default");
 					$(expectedLabel).addClass("label-danger");
-					console.log(parent);
-					console.log(expectedLabel);
+					$( "#"+showfield).keypress(function() {
+					  $(expectedLabel).removeClass("label-danger");
+					  $(expectedLabel).addClass("label-default");
+					});
 					return;
 				}
 			}
@@ -84,21 +86,39 @@ function formValidate(){
 	if($('#consumerKey').val() == ""){
         $(".consumerKey").removeClass('label-default');
         $(".consumerKey").addClass('label-danger');
+        $( "#consumerKey").keypress(function() {
+					$(".consumerKey").addClass('label-default');
+        			$(".consumerKey").removeClass('label-danger');
+					});
         return false;
     } 
     else if($('#consumerSecret').val() == ""){
         $(".consumerSecret").removeClass('label-default');
         $(".consumerSecret").addClass('label-danger');
+
+        $( "#consumerSecret").keypress(function() {
+					$(".consumerSecret").addClass('label-default');
+        			$(".consumerSecret").removeClass('label-danger');
+					});
         return false;
     }
     else if($('#accessToken').val() == ""){
      	$(".accessToken").removeClass('label-default');
         $(".accessToken").addClass('label-danger');
+
+        $( "#accessToken").keypress(function() {
+					$(".accessToken").addClass('label-default');
+        			$(".accessToken").removeClass('label-danger');
+					});
         return false;
     } 
     else if($('#accessTokenSecret').val() == ""){
         $(".accessTokenSecret").removeClass('label-default');
         $(".accessTokenSecret").addClass('label-danger');
+        $( "#accessTokenSecret").keypress(function() {
+					$(".accessTokenSecret").addClass('label-default');
+        			$(".accessTokenSecret").removeClass('label-danger');
+					});
         return false;
     }
     else{
