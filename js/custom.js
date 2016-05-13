@@ -51,7 +51,20 @@ $('#key-conf-id').click(function(){
 });
 $('#submitform').click(function(){
 	//An object Json command is created
-	var jsonCommand = new Array();
+	if($('#consumerKey').val() == ""){
+        alert('enter consumerKey');
+        
+    } else if($('#consumerSecret').val() == ""){
+        alert('enter consumerSecret');
+    }
+    else if($('#accessToken').val() == ""){
+     	alert('enter accessToken');
+    } 
+    else if($('#accessTokenSecret').val() == ""){
+        alert('enter accessTokenSecret');
+    }
+    else{
+    	var jsonCommand = new Array();
 	$('.commands-selected input ').each(
 	    function(index){  
 	        var input = $(this);
@@ -86,6 +99,8 @@ $('#submitform').click(function(){
 	$("#output-panel").css("display","block");
 	//$("#output-panel .panel-body").empty();
 	$("#output-panel .panel-body").append('<div class="output-div"><label class="label label-success">Output Json</label></br>'+jsonString+'</div>');
+    }
+	
 });
 
 
