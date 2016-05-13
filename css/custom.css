@@ -49,6 +49,7 @@ body {
 }
 #output-panel{
     height: 400px;
+    overflow: auto;
 }
 footer {
     margin: 50px 0;
