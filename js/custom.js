@@ -1,11 +1,3 @@
-// Window load function .
-(function($){
-	$(window).load(function(){
-		
-	});
-})(jQuery);	
-// End of Window load function .
-
 // A $( document ).ready() block.
 $( document ).ready(function() {
 
@@ -52,16 +44,21 @@ $('#key-conf-id').click(function(){
 $('#submitform').click(function(){
 	//An object Json command is created
 	if($('#consumerKey').val() == ""){
-        alert('enter consumerKey');
-        
-    } else if($('#consumerSecret').val() == ""){
-        alert('enter consumerSecret');
+        $(".consumerKey").removeClass('label-default');
+        $(".consumerKey").addClass('label-danger');
+
+    } 
+    else if($('#consumerSecret').val() == ""){
+        $(".consumerSecret").removeClass('label-default');
+        $(".consumerSecret").addClass('label-danger');
     }
     else if($('#accessToken').val() == ""){
-     	alert('enter accessToken');
+     	$(".accessToken").removeClass('label-default');
+        $(".accessToken").addClass('label-danger');
     } 
     else if($('#accessTokenSecret').val() == ""){
-        alert('enter accessTokenSecret');
+        $(".accessTokenSecret").removeClass('label-default');
+        $(".accessTokenSecret").addClass('label-danger');
     }
     else{
     	var jsonCommand = new Array();
