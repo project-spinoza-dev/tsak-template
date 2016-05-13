@@ -103,6 +103,8 @@ $('#submitform').click(function(){
 	
 });
 
+//. fire dropDown onChange event
+$("#commands-select").trigger('change');
 
 });  // End of document ready function.
 
